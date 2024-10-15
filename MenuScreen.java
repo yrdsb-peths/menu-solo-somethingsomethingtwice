@@ -1,15 +1,14 @@
-
 import greenfoot.*;
 
-public class MenuScreen extends World {
+public class MenuScreen extends Screen {
   public MenuScreen() {
-    super(600, 400, 1);
+    super();
 
     addObject(new Button(this::goInstructions), 300, 340);
   }
 
   public void goInstructions() {
-    Greenfoot.setWorld(new InstructionScreen());
+    new InstructionScreen().push();
   }
 
 }

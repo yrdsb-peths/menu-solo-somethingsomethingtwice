@@ -1,8 +1,8 @@
 import greenfoot.*;
 
-public class InstructionScreen extends World {
+public class InstructionScreen extends Screen {
   public InstructionScreen() {
-    super(600, 400, 1);
+    super();
 
   }
 
