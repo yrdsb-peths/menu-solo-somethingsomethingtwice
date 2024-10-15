@@ -1,6 +1,6 @@
 import greenfoot.*;
 public class Screen extends World {
-    static Stack<Screen> screens = new Stack<Screen>();
+    private static Stack<Screen> screens = new Stack<Screen>();
     
     public Screen() {
         super(600, 400, 1);
