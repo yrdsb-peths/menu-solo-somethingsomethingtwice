@@ -4,19 +4,28 @@ public class Button extends Actor {
     private Runnable action;
     private Label label = new Label("", 32);
 
-    public void init(Runnable action, int xsc) {
+    public void init(Runnable action, int width) {
         this.action = action;
         GreenfootImage image = new GreenfootImage("images/button_square_flat.png");
-        image.scale(16 * xsc, image.getHeight());
+        image.scale(width, image.getHeight());
         setImage(image);
     }
 
     public Button(Runnable action) {
-        init(action, 4);
+        init(action, 64);
+    }
+
+    public Button(Runnable action, int width) {
+        init(action, width);
     }
     
     public Button(Runnable action, String text) {
-        init(action, text.length());
+        init(action, 64);
+        label.setValue(text);
+    }
+
+    public Button(Runnable action, String text, int width) {
+        init(action, width);
         label.setValue(text);
     }
 
