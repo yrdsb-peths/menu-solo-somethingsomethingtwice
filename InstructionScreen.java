@@ -15,7 +15,7 @@ public class InstructionScreen extends Screen {
     addObject(label, 300, 64);
     addObject(new Button(this::nextInstruction, "Next"), 600 - 120, 340);
     addObject(new Button(this::previousInstruction, "Back"), 120, 340);
-    addObject(new Button(this::goBack, "Go to Menu", 144), 300, 340);
+    addObject(new Button(this::pop, "Go to Menu", 144), 300, 340);
   }
   
   public void nextInstruction() {
@@ -27,9 +27,5 @@ public class InstructionScreen extends Screen {
     if (--index < 0)
       index = instructions.length;
     label.setValue(instructions[index]);
-  }
-
-  public void goBack() {
-    pop();
   }
 }

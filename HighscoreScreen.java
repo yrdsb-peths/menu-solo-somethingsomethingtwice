@@ -22,10 +22,6 @@ public class HighscoreScreen extends Screen {
     }
     label.setValue(str);
     addObject(label, 300, 64 + 16 * lines);
-    addObject(new Button(this::goBack, "Go to Menu", 144), 300, 340);
-  }
-
-  public void goBack() {
-    pop();
+    addObject(new Button(this::pop, "Go to Menu", 144), 300, 340);
   }
 }
