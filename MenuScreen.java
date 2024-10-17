@@ -5,6 +5,7 @@ public class MenuScreen extends Screen {
 
   public MenuScreen() {
     super();
+    push();
 
     addObject(avatar, 300 - 96, 160);
     addObject(new Button(this::goInstructions, "Instructions", 160), 120, 340);
